@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ahmad Ariffbillah - AI Specialist & Machine Learning Graduate Portfolio. Showcasing projects in Deep Learning, GCP, NLP, and Computer Vision.">
+    <meta name="author" content="Ahmad Ariffbillah">
+    <title>Ahmad Ariffbillah | AI Specialist & Intelligent System Engineer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=1.0.9">
+</head>
+
+<body>
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Ariff<span class="logo-dot">.</span>Dev<span
+                    class="logo-accent">/&gt;</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience & Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-outline btn-sm" id="presentation-toggle" title="Toggle Slide Presentation Mode">
+                    <i class="fa-solid fa-desktop"></i> Slides
+                </button>
+                <a href="#contact" class="btn btn-secondary btn-sm">Let's Talk</a>
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge glow-animation">
+                        <i class="fa-solid fa-graduation-cap"></i> Fresh AI Graduate
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Ahmad Ariffbillah</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Specializing in <span class="typing-text"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Passionate Computer Science graduate specializing in Intelligent System Engineering (Big Data
+                        track). Eager to apply AI-driven solutions and cloud architecture (GCP) to address real-world
+                        challenges.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/Ariff03" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-btn github">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ahmad-ariffbillah-bin-abdul-shukor-0b70a3281/"
+                            target="_blank" rel="noopener noreferrer" class="social-icon-btn linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll Down">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Intelligent System Engineer</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-image-wrapper">
+                        <div class="image-border-glow"></div>
+                        <img src="assets/profile_suit.png" alt="Ahmad Ariffbillah" class="about-image">
+                    </div>
+
+                    <div class="about-info">
+                        <h3 class="about-heading">Applying AI, Big Data & Cloud Architecture to Solve Real Problems</h3>
+                        <p class="about-text">
+                            I am a Computer Science graduate with a Bachelor of Information Systems (Hons.) Intelligent
+                            System Engineering (Big Data track). I am actively seeking full-time opportunities where I
+                            can apply my skills in machine learning, artificial intelligence, and cloud engineering.
+                        </p>
+                        <p class="about-text">
+                            Through hands-on internships at Selangor Technical Skills Development Centre (STDC) and
+                            BusinessQuest.com, I have designed and deployed AI models, streamlined program onboarding
+                            system
+                            using GCP cloud native tools, and created an attendance system that leverages face
+                            recognition AI for verification purpose.
+                        </p>
+
+                        <div class="skills-container">
+                            <h4 class="skills-title">Technical Expertise</h4>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h5><i class="fa-solid fa-code"></i> Languages</h5>
+                                    <div class="skill-tags">
+                                        <span>Python</span>
+                                        <span>MATLAB</span>
+                                        <span>SQL (myPHP)</span>
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JSON</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h5><i class="fa-solid fa-network-wired"></i> Frameworks & AI</h5>
+                                    <div class="skill-tags">
+                                        <span>Deep Learning</span>
+                                        <span>Scikit-Learn</span>
+                                        <span>Machine Learning</span>
+                                        <span>Donut Model</span>
+                                        <span>Fuzzy Logic</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h5><i class="fa-solid fa-robot"></i> Specializations</h5>
+                                    <div class="skill-tags">
+                                        <span>Intelligent Systems</span>
+                                        <span>Big Data Analytics</span>
+                                        <span>Computer Vision</span>
+                                        <span>Document AI</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h5><i class="fa-solid fa-cloud-arrow-up"></i> Cloud & Tools</h5>
+                                    <div class="skill-tags">
+                                        <span>GCP / Vertex AI</span>
+                                        <span>Compute Engine</span>
+                                        <span>Cloud Functions</span>
+                                        <span>Cloud Storage</span>
+                                        <span>VPC Networking</span>
+                                        <span>Git</span>
+                                        <span>VS Code</span>
+                                        <span>Notepad++</span>
+                                        <span>Figma / Canva</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">My Work</span>
+                    <h2 class="section-title">Selected AI & Deep Learning Projects</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <!-- Projects Filter Tabs -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="nlp">NLP & LLMs</button>
+                    <button class="filter-btn" data-filter="cv">Computer Vision</button>
+                    <button class="filter-btn" data-filter="ml">Core ML & Cloud</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1: Phishing Classification (FYP) -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-card-inner">
+                            <div class="project-media">
+                                <div class="project-overlay-gradient"></div>
+                                <div class="project-media-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                <div class="project-image-placeholder">
+                                    <span>Phishing Website Classification</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-badge">Core ML (Final Year Project)</span>
+                                </div>
+                                <h3 class="project-card-title">Phishing Website Classification using ML</h3>
+                                <p class="project-card-desc">
+                                    Developed a machine learning prototype capable of classifying websites as phishing
+                                    or legitimate with a high accuracy of 95.54%. Researched and analyzed features to
+                                    identify malicious URLs and patterns.
+                                </p>
+                                <div class="project-tech-tags">
+                                    <span>Python</span>
+                                    <span>Scikit-Learn</span>
+                                    <span>Machine Learning</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: AI Document Scanning -->
+                    <div class="project-card" data-category="nlp">
+                        <div class="project-card-inner">
+                            <div class="project-media">
+                                <div class="project-overlay-gradient"></div>
+                                <div class="project-media-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                                <div class="project-image-placeholder text-gen-gradient">
+                                    <span>AI Document Scanning</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-badge">NLP & Document AI</span>
+                                </div>
+                                <h3 class="project-card-title">AI-Based Document Scanning System</h3>
+                                <p class="project-card-desc">
+                                    Contributed to system research and implementation of a layout-aware OCR/document
+                                    parsing model using the Donut transformer. Converts raw scans into structured JSON
+                                    information dynamically.
+                                </p>
+                                <div class="project-tech-tags">
+                                    <span>Python</span>
+                                    <span>Donut</span>
+                                    <span>JSON</span>
+                                    <span>Deep Learning</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Apple Attendance System -->
+                    <div class="project-card" data-category="cv">
+                        <div class="project-card-inner">
+                            <div class="project-media">
+                                <div class="project-overlay-gradient"></div>
+                                <div class="project-media-icon"><i class="fa-solid fa-user-check"></i></div>
+                                <div class="project-image-placeholder cv-gradient">
+                                    <span>Apple Intern Attendance System</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-badge">Computer Vision</span>
+                                </div>
+                                <h3 class="project-card-title">STDC Apple Attendance System</h3>
+                                <p class="project-card-desc">
+                                    Developed a face recognition-based biometric attendance system for Apple interns.
+                                    Built standard verification loops using pre-trained computer vision backbones to
+                                    replace manual log sheets.
+                                </p>
+                                <div class="project-tech-tags">
+                                    <span>Python</span>
+                                    <span>Face Recognition</span>
+                                    <span>SQL (myPHP)</span>
+                                    <span>HTML</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Dropout Prediction -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-card-inner">
+                            <div class="project-media">
+                                <div class="project-overlay-gradient"></div>
+                                <div class="project-media-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                                <div class="project-image-placeholder rl-gradient">
+                                    <span>Student Dropout Predictor</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-badge">Deep Learning</span>
+                                </div>
+                                <h3 class="project-card-title">Student Dropout & Success Model</h3>
+                                <p class="project-card-desc">
+                                    Developed a deep learning model to predict student dropout rates and academic
+                                    success with a 73% classification accuracy. Useful for early intervention and
+                                    analytics in institutional settings.
+                                </p>
+                                <div class="project-tech-tags">
+                                    <span>Python</span>
+                                    <span>Scikit-Learn</span>
+                                    <span>Deep Learning</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: STDC Onboarding -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-card-inner">
+                            <div class="project-media">
+                                <div class="project-overlay-gradient"></div>
+                                <div class="project-media-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                                <div class="project-image-placeholder ts-gradient">
+                                    <span>Cloud Program Onboarding</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-badge">Cloud Architecture</span>
+                                </div>
+                                <h3 class="project-card-title">STDC Program Onboarding System</h3>
+                                <p class="project-card-desc">
+                                    Built an onboarding platform integrated with Google Cloud Platform (GCP). Allows
+                                    seamless registrations and program configurations leveraging Serverless architecture
+                                    and Vertex AI tools.
+                                </p>
+                                <div class="project-tech-tags">
+                                    <span>GCP</span>
+                                    <span>Vertex AI</span>
+                                    <span>Cloud Functions</span>
+                                    <span>Cloud Storage</span>
+                                    <span>IAM</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Fuzzy Logic Natural Disaster -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-card-inner">
+                            <div class="project-media">
+                                <div class="project-overlay-gradient"></div>
+                                <div class="project-media-icon"><i class="fa-solid fa-house-fire"></i></div>
+                                <div class="project-image-placeholder med-gradient">
+                                    <span>Fuzzy Logic System</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-badge">Fuzzy Logic & AI</span>
+                                </div>
+                                <h3 class="project-card-title">Disaster Management System</h3>
+                                <p class="project-card-desc">
+                                    Built a fuzzy logic predictor to analyze environmental factors and calculate
+                                    severity indices for natural disasters, helping coordinate rescue and evaluation
+                                    alerts.
+                                </p>
+                                <div class="project-tech-tags">
+                                    <span>MATLAB</span>
+                                    <span>Python</span>
+                                    <span>VS Code</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: Deepfake Game -->
+                    <div class="project-card" data-category="cv">
+                        <div class="project-card-inner">
+                            <div class="project-media">
+                                <div class="project-overlay-gradient"></div>
+                                <div class="project-media-icon"><i class="fa-solid fa-gamepad"></i></div>
+                                <div class="project-image-placeholder cv-gradient">
+                                    <span>Deepfake Trivia Game</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-badge">Computer Vision / UI</span>
+                                </div>
+                                <h3 class="project-card-title">Deepfake Detection Game (SULAM)</h3>
+                                <p class="project-card-desc">
+                                    Designed and developed an interactive visual trivia game challenging players to
+                                    distinguish between AI-generated fake media and authentic images/videos. Emphasizes
+                                    security awareness.
+                                </p>
+                                <div class="project-tech-tags">
+                                    <span>Figma</span>
+                                    <span>Canva</span>
+                                    <span>UI/UX</span>
+                                    <span>Digital Security</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: Website Development -->
+                    <div class="project-card" data-category="ml">
+                        <div class="project-card-inner">
+                            <div class="project-media">
+                                <div class="project-overlay-gradient"></div>
+                                <div class="project-media-icon"><i class="fa-solid fa-code"></i></div>
+                                <div class="project-image-placeholder">
+                                    <span>Web Maintenance</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-badge">Web Development</span>
+                                </div>
+                                <h3 class="project-card-title">Web Development & Maintenance</h3>
+                                <p class="project-card-desc">
+                                    Built, deployed, and maintained custom front-end and back-end configurations for
+                                    corporate client sites, focusing on responsiveness, loading speeds, and clean
+                                    markup.
+                                </p>
+                                <div class="project-tech-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>Notepad++</span>
+                                    <span>Web Design</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="timeline-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">History</span>
+                    <h2 class="section-title">Education & Key Experience</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <!-- Timeline Line -->
+                    <div class="timeline-line"></div>
+
+                    <!-- Timeline Item 1: STDC Internship -->
+                    <div class="timeline-item">
+                        <div class="timeline-bullet">
+                            <div class="bullet-inner"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-duration">Mac 2026 - July 2026</span>
+                                <span class="timeline-badge experience">Experience</span>
+                            </div>
+                            <h3 class="timeline-title">Selangor Technical Skills Development Centre (STDC)</h3>
+                            <h4 class="timeline-subtitle">Machine Learning & Cloud Intern</h4>
+                            <p class="timeline-desc">
+                                Contributed to building secure and serverless cloud solutions and biometric recognition
+                                applications.
+                            </p>
+                            <div class="timeline-details">
+                                <ul>
+                                    <li><strong>STDC Program Onboarding System:</strong> Developed a serverless student
+                                        onboarding program using GCP tools (Compute Engine, Cloud Functions, Cloud
+                                        Storage, IAM, VPC Networking, Vertex AI) for automated course registration.</li>
+                                    <li><strong>STDC Apple Attendance System:</strong> Implemented a facial recognition
+                                        verification login framework using Python and SQL (myPHP) to automate clock-ins
+                                        for Apple interns.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2: UiTM Shah Alam -->
+                    <div class="timeline-item">
+                        <div class="timeline-bullet">
+                            <div class="bullet-inner"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-duration">Mac 2024 - Present</span>
+                                <span class="timeline-badge education">Education</span>
+                            </div>
+                            <h3 class="timeline-title">Universiti Teknologi MARA (UiTM), Shah Alam</h3>
+                            <h4 class="timeline-subtitle">Bachelor of Information Systems (Hons.) Intelligent System
+                                Engineering</h4>
+                            <p class="timeline-desc">
+                                Currently pursuing specialized education in Intelligent Systems Engineering with a focus
+                                on Big Data architectures and cloud computing.
+                            </p>
+                            <div class="timeline-details">
+                                <strong>Achievements:</strong> CGPA: 3.72 | Sponsored under the prestigious PIDM
+                                Scholarship program.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3: BusinessQuest Internship -->
+                    <div class="timeline-item">
+                        <div class="timeline-bullet">
+                            <div class="bullet-inner"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-duration">Oct 2023 - Mac 2024</span>
+                                <span class="timeline-badge experience">Experience</span>
+                            </div>
+                            <h3 class="timeline-title">BusinessQuest.com Sdn. Bhd.</h3>
+                            <h4 class="timeline-subtitle">AI & Website Development Intern</h4>
+                            <p class="timeline-desc">
+                                Focused on the intersection of modern document analysis AI and custom front-end
+                                development/maintenance.
+                            </p>
+                            <div class="timeline-details">
+                                <ul>
+                                    <li><strong>AI Document Scanner:</strong> Conducted system research and fine-tuned a
+                                        custom OCR parsing model using the Donut transformer to extract structural JSON
+                                        text from scan batches.</li>
+                                    <li><strong>Web Maintenance:</strong> Maintained and updated responsive web
+                                        codebases for corporate clients using HTML, CSS, and Notepad++.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4: UiTM Melaka Diploma -->
+                    <div class="timeline-item">
+                        <div class="timeline-bullet">
+                            <div class="bullet-inner"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-duration">Oct 2021 - Mac 2024</span>
+                                <span class="timeline-badge education">Education</span>
+                            </div>
+                            <h3 class="timeline-title">Universiti Teknologi MARA (UiTM), Cawangan Melaka</h3>
+                            <h4 class="timeline-subtitle">Diploma in Computer Science</h4>
+                            <p class="timeline-desc">
+                                Formed a strong foundation in core computer science subjects, database design,
+                                algorithms, and modular object-oriented programming.
+                            </p>
+                            <div class="timeline-details">
+                                <strong>Achievements:</strong> CGPA: 3.80 | Awarded the prestigious Vice Chancellor
+                                Award.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5: Certifications -->
+                    <div class="timeline-item">
+                        <div class="timeline-bullet">
+                            <div class="bullet-inner"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-duration">Certifications</span>
+                                <span class="timeline-badge achievement">Credentials</span>
+                            </div>
+                            <h3 class="timeline-title">Academic & Technical Certifications</h3>
+                            <h4 class="timeline-subtitle">Verified Professional Credentials</h4>
+                            <p class="timeline-desc">
+                                Actively completing external certifications to broaden technology horizons.
+                            </p>
+                            <div class="timeline-details">
+                                <ul>
+                                    <li><strong>Introduction to IoT</strong> — Cisco Academy</li>
+                                    <li><strong>Database Management System</strong> — Oracle Academy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Connect</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards / Info -->
+                    <div class="contact-info-panel">
+                        <h3 class="contact-panel-title">Let's build something intelligent.</h3>
+                        <p class="contact-panel-desc">
+                            I am actively seeking full-time opportunities related to AI, Machine Learning, Data Science,
+                            or general IT fields. If you have an exciting opening, scholarship, or project to discuss,
+                            feel free to connect!
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon-box">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email Me</span>
+                                    <a href="mailto:billahariff03@gmail.com"
+                                        class="contact-link">billahariff03@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon-box">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Call Me</span>
+                                    <a href="tel:+60176953948" class="contact-link">+60176953948</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon-box">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Shah Alam, Selangor, Malaysia</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social-row">
+                            <a href="https://github.com/Ariff03" target="_blank" rel="noopener noreferrer"
+                                class="social-icon-btn github">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ahmad-ariffbillah-bin-abdul-shukor-0b70a3281/"
+                                target="_blank" rel="noopener noreferrer" class="social-icon-btn linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="Your Name"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="you@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input"
+                                    placeholder="Opportunity details" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea id="message" name="message" rows="5" class="form-input"
+                                    placeholder="Hi Ariff, I'd love to chat about..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <div class="form-status-msg" id="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Ahmad Ariffbillah. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Presentation Mode Overlay Controls -->
+    <div class="presentation-overlay" id="presentation-overlay">
+        <div class="pres-header">
+            <span class="pres-title">Ahmad Ariffbillah - Portfolio Slideshow</span>
+            <div class="pres-actions">
+                <button class="btn-print" id="pres-print" title="Print/Save Slides as PDF"><i class="fa-solid fa-print"></i> Print PDF</button>
+                <button class="btn-exit" id="pres-exit" title="Exit Presentation Mode"><i class="fa-solid fa-xmark"></i> Exit</button>
+            </div>
+        </div>
+        <div class="pres-navigation">
+            <button class="nav-btn-arrow" id="pres-prev" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+            <span class="pres-counter" id="pres-counter">1 / 5</span>
+            <button class="nav-btn-arrow" id="pres-next" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="pres-instructions">
+            <span>Use Left / Right arrow keys or click arrows to navigate. Press ESC to exit. Click "Print PDF" to save as PDF slides.</span>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js?v=1.0.1"></script>
+</body>
+
+</html>
