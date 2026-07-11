@@ -1461,6 +1461,24 @@ textarea.form-input {
     line-height: 1.8;
 }
 
+.award-source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-light);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    width: fit-content;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.award-source-link:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
 .award-meta-tags {
     display: flex;
     gap: 1.5rem;
@@ -2093,5 +2111,9 @@ body.presentation-mode .award-text {
     .award-text {
         font-size: 0.9rem !important;
         line-height: 1.5 !important;
+    }
+
+    .award-source-link {
+        display: none !important;
     }
 }
