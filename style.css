@@ -1409,6 +1409,139 @@ textarea.form-input {
 }
 
 /* ==========================================================================
+   Awards & Achievements Section Styling
+   ========================================================================== */
+.awards-section {
+    background-color: var(--bg-dark);
+    position: relative;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.award-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.award-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    color: var(--primary-light);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.05);
+}
+
+.award-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    background: linear-gradient(135deg, #ffffff 40%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.award-text {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.award-meta-tags {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.award-meta-tags span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.award-meta-tags span i {
+    color: var(--primary);
+}
+
+.award-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.35;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.award-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.image-border-glow {
+    position: absolute;
+    inset: -10px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    border-radius: 20px;
+    filter: blur(20px);
+    opacity: 0.25;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.award-image-wrapper:hover .award-image {
+    transform: scale(1.02) translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.award-image-wrapper:hover .image-border-glow {
+    opacity: 0.45;
+    filter: blur(25px);
+}
+
+/* Responsive for awards */
+@media (max-width: 1024px) {
+    .awards-grid {
+        gap: 3rem;
+    }
+    .award-heading {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .award-image-wrapper {
+        max-width: 450px;
+    }
+}
+
+/* ==========================================================================
    Slide Presentation Mode Styles (Screen & Print)
    ========================================================================== */
 
@@ -1649,6 +1782,26 @@ body.presentation-mode .timeline-card {
 
 body.presentation-mode .timeline-item {
     margin-bottom: 1.5rem !important;
+}
+
+body.presentation-mode .awards-grid {
+    grid-template-columns: 1.25fr 0.75fr !important;
+    gap: 3rem !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+body.presentation-mode .award-heading {
+    font-size: 1.6rem !important;
+}
+
+body.presentation-mode .award-image-wrapper {
+    max-width: 340px !important;
+}
+
+body.presentation-mode .award-text {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
 }
 
 /* ==========================================================================
@@ -1914,5 +2067,31 @@ body.presentation-mode .timeline-item {
 
     .contact-form-panel {
         display: none !important; /* Hide contact form on print version */
+    }
+
+    /* Print styling for dedicated awards section */
+    .awards-grid {
+        grid-template-columns: 1.25fr 0.75fr !important;
+        gap: 3rem !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .award-heading {
+        font-size: 1.6rem !important;
+        color: #f8fafc !important;
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+        -webkit-text-fill-color: initial !important;
+    }
+
+    .award-image-wrapper {
+        max-width: 320px !important;
+    }
+
+    .award-text {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
     }
 }
