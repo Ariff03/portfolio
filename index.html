@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css?v=1.1.2">
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -841,6 +843,10 @@
                                 <textarea id="message" name="message" rows="5" class="form-input"
                                     placeholder="Hi Ariff, I'd love to chat about..." required></textarea>
                             </div>
+
+                            <!-- Google reCAPTCHA Widget -->
+                            <div class="g-recaptcha" data-sitekey="6LfQu1AtAAAAABKSn9OW4hxcyP0M9RD603RDCHBk"
+                                style="margin-bottom: 1.5rem; display: flex; justify-content: center;"></div>
 
                             <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
                                 <span>Send Message</span>

@@ -332,12 +332,34 @@ document.addEventListener('DOMContentLoaded', () => {
             statusMsg.className = 'form-status-msg';
             statusMsg.textContent = '';
 
+            // Verify Google reCAPTCHA if configured
+            const recaptchaWidget = document.querySelector('.g-recaptcha');
+            const hasRecaptchaKey = recaptchaWidget && recaptchaWidget.getAttribute('data-sitekey') !== 'YOUR_RECAPTCHA_SITE_KEY';
+
+            if (hasRecaptchaKey) {
+                let recaptchaResponse = '';
+                if (typeof grecaptcha !== 'undefined') {
+                    recaptchaResponse = grecaptcha.getResponse();
+                }
+
+                if (!recaptchaResponse) {
+                    statusMsg.textContent = 'Please complete the reCAPTCHA verification.';
+                    statusMsg.classList.add('error');
+                    formSubmitBtn.disabled = false;
+                    formSubmitBtn.innerHTML = originalBtnContent;
+                    return;
+                }
+            }
+
             // If not yet configured, run simulation fallback
             if (typeof emailjs === 'undefined' || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
                 setTimeout(() => {
                     statusMsg.textContent = 'Message simulated! (Configure your EmailJS keys in script.js to receive real emails)';
                     statusMsg.classList.add('success');
                     contactForm.reset();
+                    if (typeof grecaptcha !== 'undefined' && hasRecaptchaKey) {
+                        grecaptcha.reset();
+                    }
                     formSubmitBtn.disabled = false;
                     formSubmitBtn.innerHTML = originalBtnContent;
                 }, 1500);
@@ -351,7 +373,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 from_name: contactForm.name.value,
                 reply_to: contactForm.email.value,
                 subject: contactForm.subject.value,
-                message: contactForm.message.value
+                message: contactForm.message.value,
+                'g-recaptcha-response': typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : ''
             };
 
             // Send actual email via EmailJS
@@ -360,6 +383,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     statusMsg.textContent = 'Message sent successfully! Ariff will get back to you soon.';
                     statusMsg.classList.add('success');
                     contactForm.reset();
+                    if (typeof grecaptcha !== 'undefined' && hasRecaptchaKey) {
+                        grecaptcha.reset();
+                    }
                 })
                 .catch((error) => {
                     statusMsg.textContent = 'Failed to send message. Please try again or email directly.';
