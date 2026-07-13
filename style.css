@@ -51,6 +51,10 @@ body {
     line-height: 1.6;
 }
 
+p {
+    text-align: justify;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 8px;
@@ -295,6 +299,7 @@ img {
 .nav-menu {
     display: flex;
     gap: 2.2rem;
+    margin-left: 3.5rem !important;
 }
 
 .nav-link {
@@ -329,6 +334,7 @@ img {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-left: auto !important;
 }
 
 .mobile-menu-toggle {
@@ -1351,6 +1357,16 @@ textarea.form-input {
         max-width: 140px;
     }
     
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .cert-category-card {
+        padding: 1.8rem 1.5rem;
+    }
+    
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 4rem;
@@ -1427,6 +1443,117 @@ textarea.form-input {
 
 .mobile-menu-toggle.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   Certifications Section Styling
+   ========================================================================== */
+.certifications-section {
+    background-color: var(--bg-dark);
+    position: relative;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3.5rem;
+}
+
+.cert-category-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2.2rem 2rem;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cert-category-card:hover {
+    border-color: var(--border-color-glow);
+    background: var(--bg-card-hover);
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.cert-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.cert-icon-wrapper.google-cloud {
+    background: linear-gradient(135deg, #4285F4, #34A853);
+    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+}
+
+.cert-icon-wrapper.ericsson {
+    background: linear-gradient(135deg, #002561, #008254);
+    box-shadow: 0 4px 15px rgba(0, 37, 97, 0.3);
+}
+
+.cert-icon-wrapper.academies {
+    background: linear-gradient(135deg, #f59e0b, #f43f5e);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.cert-category-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.cert-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.cert-badge {
+    align-self: flex-start;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cert-name {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -1829,6 +1956,48 @@ body.presentation-mode .skills-grid {
     gap: 1rem !important;
 }
 
+body.presentation-mode .certifications-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.2rem !important;
+    margin-top: 1rem !important;
+}
+
+body.presentation-mode .cert-category-card {
+    padding: 1.2rem !important;
+    border-radius: 12px !important;
+}
+
+body.presentation-mode .cert-icon-wrapper {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 8px !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+body.presentation-mode .cert-category-title {
+    font-size: 1rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+body.presentation-mode .cert-list {
+    gap: 0.6rem !important;
+}
+
+body.presentation-mode .cert-list li {
+    padding-bottom: 0.4rem !important;
+    gap: 0.2rem !important;
+}
+
+body.presentation-mode .cert-badge {
+    font-size: 0.65rem !important;
+    padding: 0.1rem 0.4rem !important;
+}
+
+body.presentation-mode .cert-name {
+    font-size: 0.82rem !important;
+}
+
 body.presentation-mode .timeline-wrapper {
     width: 100% !important;
     padding: 1rem 0 !important;
@@ -2083,6 +2252,57 @@ body.presentation-mode .award-text {
         grid-template-columns: repeat(4, 1fr) !important;
         gap: 1rem !important;
         width: 100% !important;
+    }
+
+    .certifications-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.2rem !important;
+        margin-top: 1rem !important;
+        width: 100% !important;
+    }
+
+    .cert-category-card {
+        padding: 1.2rem !important;
+        border-radius: 12px !important;
+        background-color: var(--bg-card) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+
+    .cert-icon-wrapper {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 8px !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    .cert-category-title {
+        font-size: 1rem !important;
+        margin-bottom: 0.8rem !important;
+        color: #ffffff !important;
+    }
+
+    .cert-list {
+        gap: 0.6rem !important;
+    }
+
+    .cert-list li {
+        padding-bottom: 0.4rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        gap: 0.2rem !important;
+    }
+
+    .cert-badge {
+        font-size: 0.65rem !important;
+        padding: 0.1rem 0.4rem !important;
+        background-color: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        color: var(--primary-light) !important;
+    }
+
+    .cert-name {
+        font-size: 0.82rem !important;
+        color: var(--text-secondary) !important;
     }
 
     /* Print projects in a 2-column grid to span cleanly across A4 pages without truncation */
