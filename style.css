@@ -1326,6 +1326,9 @@ textarea.form-input {
         transition: var(--transition);
         z-index: 999;
         border-bottom: 1px solid var(--border-color);
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow-y: auto;
     }
     
     .nav-menu.active {
@@ -2029,6 +2032,16 @@ body.presentation-mode .award-image-wrapper {
 body.presentation-mode .award-text {
     font-size: 0.9rem !important;
     line-height: 1.5 !important;
+}
+
+/* reCAPTCHA mobile scaling */
+@media (max-width: 350px) {
+    .g-recaptcha {
+        transform: scale(0.82);
+        transform-origin: center center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* ==========================================================================
